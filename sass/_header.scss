@@ -1,26 +1,40 @@
 .header {
   background-color: $color-grey-dark-1; 
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
+  background-image: linear-gradient(rgba($color-secondary, .83), rgba($color-secondary, .83)), url(../img/hero.jpeg);
   background-size: center;
   background-position: center;
 
   display: grid;
-  grid-template-rows: 10rem  2rem 5rem 2rem;
+  grid-template-rows: 1fr min-content 1fr 1fr;
+  // grid-template-rows: 2fr repeat(3, 1fr);
   grid-template-columns: max-content;
   padding: 4rem;
   grid-gap: 1rem;
   justify-content: center;
 
   &__logo {
-    height: 10rem;
+    height: 18rem;
     margin-top: -4rem;
     margin-left: -3rem;
   }
 
   &__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
     font-size: 1.5rem;
     margin-left: -3rem;
+    color: $color-grey-light-2;
+
+    &::before,
+    &::after {
+      content: "";
+      height: .15rem;
+      display: block;
+      background-color: currentColor;
+    }
   }
 
   &__heading-1 {
@@ -35,8 +49,10 @@
     height: 1rem;
     margin-left: -3rem;
 
+
     img {
       height: 2.5rem;
+      filter: brightness(70%);
     }
   }
 
