@@ -17,7 +17,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: 90vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .container > * {
     padding: 4rem; }
@@ -39,6 +39,10 @@ body {
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Kreon", serif; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  line-height: 1; }
 
 .heading-2 {
   font-size: 3.8rem;
@@ -86,7 +90,7 @@ body {
   background-color: #fff;
   height: .2rem;
   width: 4rem;
-  margin-top: 3rem; }
+  margin-top: .4rem; }
   .nav-btn::before, .nav-btn::after {
     background-color: #fff;
     height: .2rem;
@@ -100,7 +104,36 @@ body {
 
 .header {
   background-color: #54483A;
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-size: center;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 10rem  2rem 5rem 2rem;
+  grid-template-columns: max-content;
+  padding: 4rem;
+  grid-gap: 1rem;
+  justify-content: center; }
+  .header__logo {
+    height: 10rem;
+    margin-top: -4rem;
+    margin-left: -3rem; }
+  .header__seenon-text {
+    font-size: 1.5rem;
+    margin-left: -3rem; }
+  .header__heading-1 {
+    margin-left: -3rem; }
+  .header__heading-3 {
+    margin-left: -3rem; }
+  .header__seenon-logos {
+    height: 1rem;
+    margin-left: -3rem; }
+    .header__seenon-logos img {
+      height: 2.5rem; }
+  .header__btn {
+    align-self: start;
+    justify-self: start;
+    margin-left: -2.8rem; }
 
 .realtors {
   background-color: #101d2c;
