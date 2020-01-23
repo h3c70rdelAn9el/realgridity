@@ -2,21 +2,26 @@
   background-color: $color-grey-dark-1; 
   grid-column: full-start / col-end 6;
   background-image: linear-gradient(rgba($color-secondary, .83), rgba($color-secondary, .83)), url(../img/hero.jpeg);
-  background-size: center;
+  background-size: cover;
   background-position: center;
 
   display: grid;
   grid-template-rows: 1fr min-content 1fr 1fr;
   // grid-template-rows: 2fr repeat(3, 1fr);
-  grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content);
   padding: 4rem;
   grid-gap: 1rem;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
   &__logo {
-    height: 18rem;
+    height: 10rem;
     margin-top: -4rem;
-    margin-left: -3rem;
+    justify-self: center;
+    // margin-left: -3rem;
   }
 
   &__seenon-text {
@@ -27,6 +32,7 @@
     font-size: 1.5rem;
     margin-left: -3rem;
     color: $color-grey-light-2;
+    justify-content: center;
 
     &::before,
     &::after {
@@ -37,28 +43,24 @@
     }
   }
 
-  &__heading-1 {
-    margin-left: -3rem;
-  }
-
-  &__heading-3 {
-    margin-left: -3rem;
-  }
 
   &__seenon-logos {
-    height: 1rem;
-    margin-left: -3rem;
-
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center;
+    // align-items: center;
 
     img {
-      height: 2.5rem;
+      max-height: 1.5rem;
+      max-width: 100%;
       filter: brightness(70%);
     }
   }
 
   &__btn {
     align-self: start;
-    justify-self: start;
-    margin-left: -2.8rem;;
+    justify-self: center;
+    margin-left: -1rem;
   }
 }
